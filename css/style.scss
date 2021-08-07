@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import "global";
+@import "color";
+
+.card-container {
+  width: 89%;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: $very-pale-blue-neutral;
+  text-align: center;
+  border-radius: 1.7rem;
+  margin-bottom: 3em;
+  box-shadow: 0px 7px 20px 5px rgba(0, 0, 0, 0.13);
+
+  .main-img {
+    img {
+      border-top-left-radius: 1.7rem;
+      border-top-right-radius: 1.7rem;
+    }
+  }
+
+  .content-area {
+    padding: 2em 1.6em;
+
+    h1 {
+      color: $dark-blue-neutral;
+      margin-bottom: 0.8em;
+      font-weight: 900;
+    }
+
+    .main-para {
+      color: $desaturated-blue-neutral;
+      line-height: 1.7;
+      font-weight: 500;
+      margin-bottom: 1.5em;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .plan-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $bright-blue-primary-light;
+      border-radius: 1rem;
+      padding: 1em 0.3em;
+      margin-bottom: 1.5em;
+
+      .plan-text {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1em;
+        gap: 0.2em;
+
+        p {
+          &:first-child {
+            color: $dark-blue-neutral;
+            font-weight: 900;
+          }
+
+          &:last-child {
+            color: $desaturated-blue-neutral;
+          }
+        }
+      }
+
+      .change-plan {
+        a {
+          color: $bright-blue-primary;
+          font-weight: 700;
+
+          &:active {
+            color: $bright-blue-primary-active;
+          }
+        }
+      }
+    }
+
+    .main-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6em;
+
+      .payment-btn {
+        background-color: $bright-blue-primary;
+        border: none;
+        color: $very-pale-blue-neutral;
+        padding: 1em 0 1.1em;
+        font-size: 1.01rem;
+        font-weight: 700;
+        border-radius: 0.8rem;
+        width: 100%;
+        box-shadow: 0px 7px 20px 5px rgba(56, 41, 224, 0.3);
+        cursor: pointer;
+
+        &:active {
+          background-color: $bright-blue-primary-active;
+        }
+      }
+
+      .cancel-btn {
+        font-size: 1rem;
+        color: $desaturated-blue-neutral;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:active {
+          color: $dark-blue-neutral;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+
+  a {
+    color: $bright-blue-primary;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 450px) {
+  .card-container {
+    .content-area {
+      padding: 3em 3em;
+
+      .plan-area {
+        .plan-text {
+          margin-right: 3.5em;
+        }
+      }
+
+      .main-cta {
+        gap: 1.8em;
+      }
+    }
+  }
+}

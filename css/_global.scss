@@ -1,0 +1,35 @@
+@import "color";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $pale-blue-primary;
+  padding: 6em 0 3em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 968px) {
+  body {
+    background: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $pale-blue-primary;
+  }
+}
